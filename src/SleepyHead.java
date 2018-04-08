@@ -8,7 +8,7 @@ public class SleepyHead {
 
 	public static void main(String[] args) {
 
-		boolean isWeekday, isVacation;
+		boolean isWeekday = false, isVacation = false;
 
 		/*
 		 * Ask the user for these values using JOptionPane.showConfirmDialog(null,
@@ -20,9 +20,27 @@ isWeekday = true;
 
 		}
 		if (ans == 1) {
-		
+		isWeekday = false;
 		}
-
+int vac = JOptionPane.showConfirmDialog(null, "Are you on vacation?");
+if (vac == 0) {
+	isVacation = true;
+}
+if (vac == 1) {
+	isVacation = false;
+}
+if (isVacation == true) {
+	JOptionPane.showMessageDialog(null, "Sleep in");
+}
+if (isWeekday == true && isVacation == true) {
+	JOptionPane.showMessageDialog(null, "Sleep in");
+}
+if (isWeekday == false && isVacation == true) {
+	JOptionPane.showMessageDialog(null, "Sleep in");
+}
+if (isWeekday == true && isVacation == false) {
+	JOptionPane.showMessageDialog(null, "Get up to another pointless day of living, loser.");
+}
 		// 1 = no
 		// 0 = yes
 		// 2 = cancel
